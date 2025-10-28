@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+<title>BL4CKEYE Photography</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <img src="bl4ckeye logo new.jpg.png" alt="Logo">
+  <nav>
+    <a href="#hero">HOME</a>
+    <a href="#prijzen">PRIJZEN</a>
+    <a href="#booking">BOOK ONS</a>
+    <a href="#about">OVER MIJ</a>
+    <a href="#gallery">PHOTO ALBUM</a>
+    <a href="#calendar">BESCHIKBAARHEID</a>
+
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="slideshow hero-slideshow">
+    <img src="Example6.jpg" class="active">
+    <img src="Example2.jpg">
+    <img src="Example3.jpg">
+    <img src="Example4.jpg">
+    <img src="Example5.jpg">
+  </div>
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>BL4CKEYE PHOTOGRAPHY</h1>
+    <p>Momenten vastleggen met passie en creativiteit</p>
+  </div>
+</section>
+
+<!-- PRIJZEN -->
+<section id="prijzen">
+  <div class="slideshow prijs-slideshow">
+    <img src="Voorbeeld1.jpg" class="active">
+    <img src="Voorbeeld2.jpg">
+    <img src="Voorbeeld3.jpg">
+    <img src="Voorbeeld4.jpg">
+  </div>
+  <div class="overlay"></div>
+  <div class="prijs-container">
+    <div class="price-list">
+      <div class="price-category">
+        <h3>📷 FOTOGRAFIE</h3>
+        <p>FEESTJES</p>
+        <p class="prijs-bedrag">SRD 500 PER UUR</p>
+        <p>HUWELIJKEN</p>
+        <p class="prijs-bedrag">SRD 450 PER UUR</p>
+        <p>FOTOSHOOTS</p>
+        <p class="prijs-bedrag">SRD 750 PER UUR</p>
+      </div>
+      <div class="price-category">
+        <h3>🎬 VIDEOGRAFIE</h3>
+        <p>SHORTMOVIE</p>
+        <p class="prijs-bedrag">SRD 1500</p>
+        <p>ALGEMEEN</p>
+        <p class="prijs-bedrag">SRD 450 PER UUR</p>
+        <p>RECLAMES</p>
+        <p class="prijs-bedrag">SRD 2000</p>
+      </div>
+    </div>
+    <div class="prijs-extra-onder">
+      <p>LET OP!!</p>
+      <p>VERVOERSKOSTEN ZIJN EXCLUSIEF!!</p>
+      <p>LEVERING GESCHIEDT PER MAIL/APP/USB STICK/LINK!!</p>
+    </div>
+  </div>
+</section>
+
+<!-- BOEKING -->
+<section id="booking">
+  <div class="slideshow booking-slideshow">
+    <img src="Boeking1.jpg" class="active">
+    <img src="Boeking2.jpg">
+    <img src="Boeking3.jpg">
+    <img src="Boeking4.jpg">
+  </div>
+  <div class="overlay"></div>
+  <div class="booking-form-container">
+    <h2>Boeking</h2>
+    <form action="send_booking.php" method="POST">
+      <input type="text" name="naam" placeholder="Naam" required>
+      <input type="text" name="adres" placeholder="Adres" required>
+      <input type="email" name="email" placeholder="E-mail" required>
+      <input type="tel" name="telefoon" placeholder="Telefoonnummer" required>
+      <select name="type_shoot" id="type_shoot" required>
+        <option value="">Kies type shoot</option>
+        <option value="foto">Foto</option>
+        <option value="video">Video</option>
+      </select>
+      <select name="foto_opties" id="foto_opties" style="display:none;">
+        <option value="">Kies fototype</option>
+        <option value="feestjes">Feestjes</option>
+        <option value="huwelijken">Huwelijken</option>
+      </select>
+      <select name="video_opties" id="video_opties" style="display:none;">
+        <option value="">Kies videotype</option>
+        <option value="shortmovie">Shortmovie</option>
+        <option value="algemeen">Algemeen</option>
+      </select>
+      <input type="number" name="aantal_uren" placeholder="Aantal uren" required>
+      <input type="text" name="tijd" placeholder="Van hoelaat tot hoelaat" required>
+      <button type="submit">Verstuur</button>
+    </form>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <h2 style="text-align:center; color:white; margin: 100px 0;">PHOTO ALBUM</h2>
+  <div class="gallery-container">
+    <div class="gallery-item"><img src="foto1.jpg" alt="Foto 1"></div>
+    <div class="gallery-item"><img src="foto2.jpg" alt="Foto 2"></div>
+    <div class="gallery-item"><img src="foto3.jpg" alt="Foto 3"></div>
+    <div class="gallery-item"><img src="foto4.jpg" alt="Foto 4"></div>
+    <div class="gallery-item"><img src="foto5.jpg" alt="Foto 5"></div>
+    <div class="gallery-item"><img src="foto14.jpg" alt="Foto 6"></div>
+    <div class="gallery-item"><img src="foto7.jpg" alt="Foto 7"></div>
+    <div class="gallery-item"><img src="foto8.jpg" alt="Foto 8"></div>
+    <div class="gallery-item"><img src="foto9.jpg" alt="Foto 9"></div>
+    <div class="gallery-item"><img src="foto10.jpg" alt="Foto 10"></div>
+    <div class="gallery-item"><img src="Foto13.jpg" alt="Foto 11"></div>
+    <div class="gallery-item"><img src="foto12.jpg" alt="Foto 12"></div>
+  </div>
+  <!-- Lightbox Overlay -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+</section>
+
+<!-- OVER MIJ -->
+<section id="about">
+  <div class="slideshow about-slideshow">
+    <img src="About1.jpg" class="active">
+    <img src="About2.jpg">
+    <img src="About3.jpg">
+    <img src="About4.jpg">
+
+
+  </div>
+  <div class="overlay"></div>
+  <div class="about-content">
+    <h2>Over Mij</h2>
+    <p>Ik ben BL4CKEYE, een gepassioneerde fotograaf en videograaf die momenten vastlegt met creativiteit en precisie. Ik hou ervan om emoties en verhalen vast te leggen in mijn werk, of het nu een fotoshoot, feest of huwelijk is.</p>
+  </div>
+</section>
+
+<!-- BESCHIKBAARHEID -->
+<section id="calendar-section">
+  <h2 style="text-align:center; margin-top:100px;">📅 Mijn Beschikbaarheid</h2>
+  <div class="calendar-header">
+    <button id="prevMonth">‹</button>
+    <h3 id="monthYear"></h3>
+    <button id="nextMonth">›</button>
+  </div>
+  <div class="calendar-container">
+    <div id="calendar"></div>
+  </div>
+  <div id="dayDetails" class="day-details">
+    <h3 id="selectedDay"></h3>
+    <ul id="timeSlots"></ul>
+  </div>
+</section>
+
+
+
+<div class="social-links">
+  <a href="https://www.facebook.com/ARYANNthegekke" target="_blank" class="social-btn facebook">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+    Volg mij op Facebook
+  </a>
+  <a href="https://wa.me/5978909628?text=Hallo%20BL4CKEYE!%20Ik%20wil%20meer%20info%20over%20een%20shoot." 
+     target="_blank" class="social-btn whatsapp">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
+    Stuur mij een bericht
+  </a>
+</div>
+
+<script src="Script.js"></script>
+</body>
+</html>
